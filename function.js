@@ -18,3 +18,11 @@ function onCancelClicked()
 {	
 	document.getElementById('viewItemButton').style.display = 'none';
 }
+
+function callOnStart()
+{
+	gameInstance.SendMessage('GameObject', 'callingStepMaterial', 'Bluesteel.jpg');
+	gameInstance.SendMessage('GameObject', 'callingCheekMaterial', 'Bluesteel.jpg');
+	gameInstance.SendMessage('GameObject', 'callingFloorMaterial', 'Iceberg.jpg');
+	//gameInstance.SendMessage('GameObject', 'callingsettingStageMaterial', 'Bluesteel.jpg');
+}

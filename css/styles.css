@@ -333,7 +333,59 @@ iframe {
   margin: 0 10px;
 }
 /*configuration-section-end*/
+/*enquiry-form*/
+.enquiry-form-nav {
+  display: flex;
+  margin-top: 10px;
+  border-bottom: 0.5px solid rgb(245, 245, 245);
+}
+.enquiry-form-nav-active {
+  border-bottom: 3px solid gray;
+}
+.enquiry-nav {
+  cursor: pointer;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 50%;
+}
 
+form,
+.order-sample {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 95%;
+}
+label,
+select,
+textarea,
+input {
+  margin: 5px 0;
+}
+input,
+select {
+  padding: 0.5rem;
+  /* border-radius: 2%; */
+}
+
+button {
+  height: 2.5rem;
+  color: white;
+  background-color: gray;
+  border: none;
+  margin: 5px 0;
+  width: 100%;
+}
+.enquiry-form-div,
+.order-sample {
+  display: none;
+  margin-bottom: 1rem;
+}
+.order-sample-text {
+  margin: 1rem 0;
+}
+
+/*enquiry-form-end*/
 /*footer*/
 /* footer {
   background-color: var(--primary-color);

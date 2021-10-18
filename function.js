@@ -22,9 +22,25 @@ function callOnStart() {
   gameInstance.SendMessage('GameObject', 'callingStepMaterial', 'Bluesteel.jpg');
   gameInstance.SendMessage('GameObject', 'callingCheekMaterial', 'Bluesteel.jpg');
   gameInstance.SendMessage('GameObject', 'callingFloorMaterial', 'Iceberg.jpg');
-  //gameInstance.SendMessage('GameObject', 'callingsettingStageMaterial', 'Bluesteel.jpg');
+  gameInstance.SendMessage('GameObject', 'callingsettingStageMaterial', 'Bluesteel.jpg');
 }
 
 function changeStepMaterial(str) {
+		
   document.getElementById('staircase-model').contentWindow.gameInstance.SendMessage('GameObject', 'callingStepMaterial', `${str}.jpg`);
+}
+
+function changeRiserMaterial(str) {
+	
+  document.getElementById('staircase-model').contentWindow.gameInstance.SendMessage('GameObject', 'callingsettingStageMaterial', `${str}.jpg`);
+}
+
+function changeStringerMaterial(str) {
+	
+  document.getElementById('staircase-model').contentWindow.gameInstance.SendMessage('GameObject', 'callingCheekMaterial', `${str}.jpg`);
+}
+
+function changeFloorMaterial(str) {
+	
+  document.getElementById('staircase-model').contentWindow.gameInstance.SendMessage('GameObject', 'callingFloorMaterial', `${str}.jpg`);
 }

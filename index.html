@@ -5,637 +5,1510 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Stiege</title>
+    <title>RenoShop</title>
   </head>
   <body>
-    <header class="heading">
-      <h1 class="config">STIEGE</h1>
-    </header>
-    <hr />
     <section>
       <div class="configurator">
         <div class="img-div">
-          <iframe id="staircase-model" src="indexStair.html" frameborder="0"></iframe>
+          <div class="select-language">
+            <div class="expand-div">
+              <h2 class="text-header language">
+                <span class="selected-lang">German</span>
+              </h2>
+              <img
+                class="expand-icon"
+                src="images/icons8-expand-arrow-16.png"
+                alt="icon"
+              />
+            </div>
+            <div class="dropdown language-function">
+              <p class="languages" onclick="germanLang()">
+                <img
+                  class="flag-img"
+                  src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg"
+                  alt=""
+                />German
+              </p>
+
+              <p class="languages" onclick="englishLang()">
+                <img
+                  class="flag-img"
+                  src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+                  alt=""
+                />English
+              </p>
+
+              <p class="languages" onclick="frenchLang()">
+                <img
+                  class="flag-img"
+                  src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg"
+                  alt=""
+                />French
+              </p>
+            </div>
+          </div>
+
+          <iframe
+            id="staircase-model"
+            src="indexStair.html"
+            frameborder="0"
+          ></iframe>
         </div>
 
         <div class="text-div clear-div">
           <div class="expand-div">
-            <h2 class="text-header">STEP</h2>
-            <img class="expand-icon" src="images/icons8-expand-arrow-16.png" alt="icon" />
+            <h2 class="text-header step">STEP</h2>
+            <img
+              class="expand-icon"
+              src="images/icons8-expand-arrow-16.png"
+              alt="icon"
+            />
           </div>
 
           <div class="dropdown config-dropdown">
             <div class="thing-grid">
               <div onclick="changeStepMaterial('Beton')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Beton.jpg" alt="color-1" title="Beton" id="Beton" /></div>
-                  <p class="small-text">Beton</p>
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Beton.jpg"
+                      alt="color-1"
+                      title="Concrete"
+                      id="Concrete"
+                    />
+                  </div>
+                  <p class="small-text concrete">Concrete</p>
                 </div>
               </div>
               <div onclick="changeStepMaterial('Bluesteel')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Bluesteel.jpg" alt="color-2" title="Bluesteel" id="Bluesteel" /></div>
-                  <p class="small-text">Bluesteel</p>
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Bluesteel.jpg"
+                      alt="color-2"
+                      title="Bluesteel"
+                      id="Bluesteel"
+                    />
+                  </div>
+                  <p class="small-text bluesteel">Bluesteel</p>
                 </div>
               </div>
               <div onclick="changeStepMaterial('Buche')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Buche.jpg" alt="color-3" title="Buche" id="Buche" /></div>
-                  <p class="small-text">Buche</p>
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Buche.jpg"
+                      alt="color-3"
+                      title="Buche"
+                      id="Buche"
+                    />
+                  </div>
+                  <p class="small-text beech">Buche</p>
                 </div>
               </div>
               <div onclick="changeStepMaterial('Canyon')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Canyon.jpg" alt="color-4" title="Canyon" id="Canyon" /></div>
-                  <p class="small-text">Canyon</p>
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Canyon.jpg"
+                      alt="color-4"
+                      title="Canyon"
+                      id="Canyon"
+                    />
+                  </div>
+                  <p class="small-text canyon">Canyon</p>
                 </div>
               </div>
 
               <div onclick="changeStepMaterial('Castle')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Castle.jpg" alt="color-5" title="Castle" id="Castle" /></div>
-                  <p class="small-text">Castle</p>
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Castle.jpg"
+                      alt="color-5"
+                      title="Castle"
+                      id="Castle"
+                    />
+                  </div>
+                  <p class="small-text castle">Castle</p>
                 </div>
               </div>
               <div onclick="changeStepMaterial('Cognac')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Cognac.jpg" alt="color-6" title="Cognac" id="Cognac" /></div>
-                  <p class="small-text">Cognac</p>
+                <div class="con active">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Cognac.jpg"
+                      alt="color-6"
+                      title="Cognac"
+                      id="Cognac"
+                    />
+                  </div>
+                  <p class="small-text congnac">Cognac</p>
                 </div>
               </div>
               <div onclick="changeStepMaterial('Country')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Country.jpg" alt="color-7" title="Country" id="Country" /></div>
-                  <p class="small-text">Country</p>
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Country.jpg"
+                      alt="color-7"
+                      title="Country"
+                      id="Country"
+                    />
+                  </div>
+                  <p class="small-text country">Country</p>
                 </div>
               </div>
               <div onclick="changeStepMaterial('Eiche')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Eiche.jpg" alt="color-8" title="Eiche" id="Eiche" /></div>
-                  <p class="small-text">Eiche</p>
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Eiche.jpg"
+                      alt="color-8"
+                      title="Eiche"
+                      id="Eiche"
+                    />
+                  </div>
+                  <p class="small-text oak">Eiche</p>
                 </div>
               </div>
               <div onclick="changeStepMaterial('Havanna')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Havanna.jpg" alt="color-9" title="Havanna" id="Havanna" /></div>
-                  <p class="small-text">Havanna</p>
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Havanna.jpg"
+                      alt="color-9"
+                      title="Havanna"
+                      id="Havanna"
+                    />
+                  </div>
+                  <p class="small-text havanna">Havanna</p>
                 </div>
               </div>
               <div onclick="changeStepMaterial('Iceberg')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Iceberg.jpg" alt="color-10" title="Iceberg" id="Iceberg" /></div>
-                  <p class="small-text">Iceberg</p>
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Iceberg.jpg"
+                      alt="color-10"
+                      title="Iceberg"
+                      id="Iceberg"
+                    />
+                  </div>
+                  <p class="small-text iceberg">Iceberg</p>
                 </div>
               </div>
               <div onclick="changeStepMaterial('Loft')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Loft.jpg" alt="color-11" title="Loft" id="Loft" /></div>
-                  <p class="small-text">Loft</p>
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Loft.jpg"
+                      alt="color-11"
+                      title="Loft"
+                      id="Loft"
+                    />
+                  </div>
+                  <p class="small-text loft">Loft</p>
                 </div>
               </div>
               <div onclick="changeStepMaterial('Macchiato')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Macchiato.jpg" alt="color-12" title="Macchiato" id="Macchiato" /></div>
-                  <p class="small-text">Macchiato</p>
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Macchiato.jpg"
+                      alt="color-12"
+                      title="Macchiato"
+                      id="Macchiato"
+                    />
+                  </div>
+                  <p class="small-text macchiato">Macchiato</p>
                 </div>
               </div>
               <div onclick="changeStepMaterial('Mooreiche')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Mooreiche.jpg" alt="color-13" title="Mooreiche" id="Mooreiche" /></div>
-                  <p class="small-text">Mooreiche</p>
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Mooreiche.jpg"
+                      alt="color-13"
+                      title="Mooreiche"
+                      id="Mooreiche"
+                    />
+                  </div>
+                  <p class="small-text moor-oak">Mooreiche</p>
                 </div>
               </div>
               <div onclick="changeStepMaterial('Mustang')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Mustang.jpg" alt="color-14" title="Mustang" id="Mustang" /></div>
-                  <p class="small-text">Mustang</p>
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Mustang.jpg"
+                      alt="color-14"
+                      title="Mustang"
+                      id="Mustang"
+                    />
+                  </div>
+                  <p class="small-text mustang">Mustang</p>
                 </div>
               </div>
               <div onclick="changeStepMaterial('Nordic')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Nordic.jpg" alt="color-15" title="Nordic" id="Nordic" /></div>
-                  <p class="small-text">Nordic</p>
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Nordic.jpg"
+                      alt="color-15"
+                      title="Nordic"
+                      id="Nordic"
+                    />
+                  </div>
+                  <p class="small-text nordic">Nordic</p>
                 </div>
               </div>
               <div onclick="changeStepMaterial('Terra')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Terra.jpg" alt="color-16" title="Terra" id="Terra" /></div>
-                  <p class="small-text">Terra</p>
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Terra.jpg"
+                      alt="color-16"
+                      title="Terra"
+                      id="Terra"
+                    />
+                  </div>
+                  <p class="small-text terra">Terra</p>
+                </div>
+              </div>
+              <div onclick="changeStepMaterial('Toscana')" class="parent-con">
+                <div class="con">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/ToscanaIcon.jpg"
+                      alt="color-17"
+                      title="Toscana"
+                      id="Toscana"
+                    />
+                  </div>
+                  <p class="small-text toscana">Toscana</p>
                 </div>
               </div>
               <div onclick="changeStepMaterial('Vermont')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Vermont.jpg" alt="color-17" title="Vermont" id="Vermont" /></div>
-                  <p class="small-text">Vermont</p>
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Vermont.jpg"
+                      alt="color-18"
+                      title="Vermont"
+                      id="Vermont"
+                    />
+                  </div>
+                  <p class="small-text vermont">Vermont</p>
                 </div>
               </div>
               <div onclick="changeStepMaterial('Vintage')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Vintage.jpg" alt="color-18" title="Vintage" id="Vintage" /></div>
-                  <p class="small-text">Vintage</p>
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Vintage.jpg"
+                      alt="color-19"
+                      title="Vintage"
+                      id="Vintage"
+                    />
+                  </div>
+                  <p class="small-text vintage">Vintage</p>
                 </div>
               </div>
               <div onclick="changeStepMaterial('Wenge')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Wenge.jpg" alt="color-19" title="Wenge" id="Wenge" /></div>
-                  <p class="small-text">Wenge</p>
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Wenge.jpg"
+                      alt="color-20"
+                      title="Wenge"
+                      id="Wenge"
+                    />
+                  </div>
+                  <p class="small-text wenge">Wenge</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="expand-div">
-            <h2 class="text-header">RISER</h2>
-            <img class="expand-icon" src="images/icons8-expand-arrow-16.png" alt="icon" />
+            <h2 class="text-header riser">RISER</h2>
+            <img
+              class="expand-icon"
+              src="images/icons8-expand-arrow-16.png"
+              alt="icon"
+            />
           </div>
 
           <div class="dropdown config-dropdown">
             <div class="thing-grid">
-              <div onclick="changeRiserMaterial('E-Alu')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/E-Alu.jpg" alt="color-1" title="E-Alu" id="E-Alu" /></div>
-                  <p class="small-text">E-Alu</p>
-                </div>
-              </div>
-              <div onclick="changeRiserMaterial('Jassmin')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Jassmin.jpg" alt="color-2" title="Jassmin" id="Jassmin" /></div>
-                  <p class="small-text">Jassmin</p>
-                </div>
-              </div>
-              <div onclick="changeRiserMaterial('Platin')"  class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Platin.jpg" alt="color-3" title="Platin" id="Platin" /></div>
-                  <p class="small-text">Platin</p>
-                </div>
-              </div>
-              <div onclick="changeRiserMaterial('Schwarz')"  class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Schwarz.jpg" alt="color-4" title="Schwarz" id="Schwarz" /></div>
-                  <p class="small-text">Schwarz</p>
-                </div>
-              </div>
-              <div onclick="changeRiserMaterial('Weiss')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Weiss.jpg" alt="color-5" title="Weiss" id="Weiss" /></div>
-                  <p class="small-text">Weiss</p>
-                </div>
-              </div>
               <div onclick="changeRiserMaterial('Beton')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Beton.jpg" alt="color-6" title="Beton" id="Beton" /></div>
-                  <p class="small-text">Beton</p>
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Beton.jpg"
+                      alt="color-1"
+                      title="Beton"
+                      id="Beton"
+                    />
+                  </div>
+                  <p class="small-text concrete">Beton</p>
                 </div>
               </div>
-              <div onclick="changeRiserMaterial('Bluesteel')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Bluesteel.jpg" alt="color-7" title="Bluesteel" id="Bluesteel" /></div>
-                  <p class="small-text">Bluesteel</p>
+              <div
+                onclick="changeRiserMaterial('Bluesteel')"
+                class="parent-con"
+              >
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Bluesteel.jpg"
+                      alt="color-2"
+                      title="Bluesteel"
+                      id="Bluesteel"
+                    />
+                  </div>
+                  <p class="small-text bluesteel">Bluesteel</p>
                 </div>
               </div>
-              <div  onclick="changeRiserMaterial('Buche')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Buche.jpg" alt="color-8" title="Buche" id="Buche" /></div>
-                  <p class="small-text">Buche</p>
+              <div onclick="changeRiserMaterial('Buche')" class="parent-con">
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Buche.jpg"
+                      alt="color-3"
+                      title="Buche"
+                      id="Buche"
+                    />
+                  </div>
+                  <p class="small-text beech">Buche</p>
                 </div>
               </div>
               <div onclick="changeRiserMaterial('Canyon')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Canyon.jpg" alt="color-9" title="Canyon" id="Canyon" /></div>
-                  <p class="small-text">Canyon</p>
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Canyon.jpg"
+                      alt="color-4"
+                      title="Canyon"
+                      id="Canyon"
+                    />
+                  </div>
+                  <p class="small-text canyon">Canyon</p>
                 </div>
               </div>
 
               <div onclick="changeRiserMaterial('Castle')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Castle.jpg" alt="color-10" title="Castle" id="Castle" /></div>
-                  <p class="small-text">Castle</p>
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Castle.jpg"
+                      alt="color-5"
+                      title="Castle"
+                      id="Castle"
+                    />
+                  </div>
+                  <p class="small-text castle">Castle</p>
                 </div>
               </div>
               <div onclick="changeRiserMaterial('Cognac')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Cognac.jpg" alt="color-11" title="Cognac" id="Cognac" /></div>
-                  <p class="small-text">Cognac</p>
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Cognac.jpg"
+                      alt="color-6"
+                      title="Cognac"
+                      id="Cognac"
+                    />
+                  </div>
+                  <p class="small-text cognac">Cognac</p>
                 </div>
               </div>
               <div onclick="changeRiserMaterial('Country')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Country.jpg" alt="color-12" title="Country" id="Country" /></div>
-                  <p class="small-text">Country</p>
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Country.jpg"
+                      alt="color-7"
+                      title="Country"
+                      id="Country"
+                    />
+                  </div>
+                  <p class="small-text country">Country</p>
                 </div>
               </div>
               <div onclick="changeRiserMaterial('Eiche')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Eiche.jpg" alt="color-13" title="Eiche" id="Eiche" /></div>
-                  <p class="small-text">Eiche</p>
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Eiche.jpg"
+                      alt="color-8"
+                      title="Eiche"
+                      id="Eiche"
+                    />
+                  </div>
+                  <p class="small-text oak">Eiche</p>
                 </div>
               </div>
+
               <div onclick="changeRiserMaterial('Havanna')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Havanna.jpg" alt="color-14" title="Havanna" id="Havanna" /></div>
-                  <p class="small-text">Havanna</p>
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Havanna.jpg"
+                      alt="color-9"
+                      title="Havanna"
+                      id="Havanna"
+                    />
+                  </div>
+                  <p class="small-text havanna">Havanna</p>
                 </div>
               </div>
               <div onclick="changeRiserMaterial('Iceberg')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Iceberg.jpg" alt="color-15" title="Iceberg" id="Iceberg" /></div>
-                  <p class="small-text">Iceberg</p>
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Iceberg.jpg"
+                      alt="color-10"
+                      title="Iceberg"
+                      id="Iceberg"
+                    />
+                  </div>
+                  <p class="small-text iceberg">Iceberg</p>
                 </div>
               </div>
+
               <div onclick="changeRiserMaterial('Loft')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Loft.jpg" alt="color-16" title="Loft" id="Loft" /></div>
-                  <p class="small-text">Loft</p>
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Loft.jpg"
+                      alt="color-11"
+                      title="Loft"
+                      id="Loft"
+                    />
+                  </div>
+                  <p class="small-text loft">Loft</p>
                 </div>
               </div>
-              <div onclick="changeRiserMaterial('Macchiato')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Macchiato.jpg" alt="color-17" title="Macchiato" id="Macchiato" /></div>
-                  <p class="small-text">Macchiato</p>
+              <div
+                onclick="changeRiserMaterial('Macchiato')"
+                class="parent-con"
+              >
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Macchiato.jpg"
+                      alt="color-12"
+                      title="Macchiato"
+                      id="Macchiato"
+                    />
+                  </div>
+                  <p class="small-text macchiato">Macchiato</p>
                 </div>
               </div>
-              <div onclick="changeRiserMaterial('Mooreiche')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Mooreiche.jpg" alt="color-18" title="Mooreiche" id="Mooreiche" /></div>
-                  <p class="small-text">Mooreiche</p>
+              <div
+                onclick="changeRiserMaterial('Mooreiche')"
+                class="parent-con"
+              >
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Mooreiche.jpg"
+                      alt="color-13"
+                      title="Mooreiche"
+                      id="Mooreiche"
+                    />
+                  </div>
+                  <p class="small-text moor-oak">Mooreiche</p>
                 </div>
               </div>
               <div onclick="changeRiserMaterial('Mustang')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Mustang.jpg" alt="color-19" title="Mustang" id="Mustang" /></div>
-                  <p class="small-text">Mustang</p>
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Mustang.jpg"
+                      alt="color-14"
+                      title="Mustang"
+                      id="Mustang"
+                    />
+                  </div>
+                  <p class="small-text mustang">Mustang</p>
                 </div>
               </div>
               <div onclick="changeRiserMaterial('Nordic')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Nordic.jpg" alt="color-20" title="Nordic" id="Nordic" /></div>
-                  <p class="small-text">Nordic</p>
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Nordic.jpg"
+                      alt="color-15"
+                      title="Nordic"
+                      id="Nordic"
+                    />
+                  </div>
+                  <p class="small-text nordic">Nordic</p>
                 </div>
               </div>
+
               <div onclick="changeRiserMaterial('Terra')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Terra.jpg" alt="color-21" title="Terra" id="Terra" /></div>
-                  <p class="small-text">Terra</p>
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Terra.jpg"
+                      alt="color-16"
+                      title="Terra"
+                      id="Terra"
+                    />
+                  </div>
+                  <p class="small-text terra">Terra</p>
+                </div>
+              </div>
+              <div onclick="changeStepMaterial('Toscana')" class="parent-con">
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/ToscanaIcon.jpg"
+                      alt="color-17"
+                      title="Toscana"
+                      id="Toscana"
+                    />
+                  </div>
+                  <p class="small-text toscana">Toscana</p>
                 </div>
               </div>
               <div onclick="changeRiserMaterial('Vermont')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Vermont.jpg" alt="color-22" title="Vermont" id="Vermont" /></div>
-                  <p class="small-text">Vermont</p>
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Vermont.jpg"
+                      alt="color-18"
+                      title="Vermont"
+                      id="Vermont"
+                    />
+                  </div>
+                  <p class="small-text vermont">Vermont</p>
                 </div>
               </div>
               <div onclick="changeRiserMaterial('Vintage')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Vintage.jpg" alt="color-23" title="Vintage" id="Vintage" /></div>
-                  <p class="small-text">Vintage</p>
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Vintage.jpg"
+                      alt="color-19"
+                      title="Vintage"
+                      id="Vintage"
+                    />
+                  </div>
+                  <p class="small-text vintage">Vintage</p>
                 </div>
               </div>
               <div onclick="changeRiserMaterial('Wenge')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Wenge.jpg" alt="color-24" title="Wenge" id="Wenge" /></div>
-                  <p class="small-text">Wenge</p>
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Wenge.jpg"
+                      alt="color-20"
+                      title="Wenge"
+                      id="Wenge"
+                    />
+                  </div>
+                  <p class="small-text wenge">Wenge</p>
+                </div>
+              </div>
+              <div onclick="changeRiserMaterial('Weiss')" class="parent-con">
+                <div class="con2 active">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Weiss.jpg"
+                      alt="color-21"
+                      title="Weiss"
+                      id="Weiss"
+                    />
+                  </div>
+                  <p class="small-text white">Weiss</p>
+                </div>
+              </div>
+              <div onclick="changeRiserMaterial('Schwarz')" class="parent-con">
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Schwarz.jpg"
+                      alt="color-22"
+                      title="Schwarz"
+                      id="Schwarz"
+                    />
+                  </div>
+                  <p class="small-text black">Schwarz</p>
+                </div>
+              </div>
+              <div onclick="changeRiserMaterial('Jassmin')" class="parent-con">
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Jassmin.jpg"
+                      alt="color-23"
+                      title="Jassmin"
+                      id="Jassmin"
+                    />
+                  </div>
+                  <p class="small-text jasmin">Jassmin</p>
+                </div>
+              </div>
+              <div onclick="changeRiserMaterial('Platin')" class="parent-con">
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Platin.jpg"
+                      alt="color-24"
+                      title="Platin"
+                      id="Platin"
+                    />
+                  </div>
+                  <p class="small-text platin">Platin</p>
+                </div>
+              </div>
+              <div onclick="changeRiserMaterial('E-Alu')" class="parent-con">
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/E-Alu.jpg"
+                      alt="color-25"
+                      title="E-Alu"
+                      id="E-Alu"
+                    />
+                  </div>
+                  <p class="small-text">Aluminium</p>
+                </div>
+              </div>
+
+              <div onclick="RemoveRiserMaterial()" class="parent-con">
+                <div class="con2">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Withthout.jpg"
+                      alt="color-26"
+                      title="Withthout"
+                      id="Withthout"
+                    />
+                  </div>
+                  <p class="small-text without-riser">Without Riser</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="expand-div">
-            <h2 class="text-header">STRINGER</h2>
-            <img class="expand-icon" src="images/icons8-expand-arrow-16.png" alt="icon" />
+            <h2 class="text-header stringer">STRINGER</h2>
+            <img
+              class="expand-icon"
+              src="images/icons8-expand-arrow-16.png"
+              alt="icon"
+            />
           </div>
 
           <div class="dropdown config-dropdown">
             <div class="thing-grid">
-              <div onclick="changeStringerMaterial('E-Alu')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/E-Alu.jpg" alt="color-1" title="E-Alu" id="E-Alu" /></div>
-                  <p class="small-text">E-Alu</p>
-                </div>
-              </div>
-              <div onclick="changeStringerMaterial('Jassmin')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Jassmin.jpg" alt="color-2" title="Jassmin" id="Jassmin" /></div>
-                  <p class="small-text">Jassmin</p>
-                </div>
-              </div>
-              <div onclick="changeStringerMaterial('Platin')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Platin.jpg" alt="color-3" title="Platin" id="Platin" /></div>
-                  <p class="small-text">Platin</p>
-                </div>
-              </div>
-              <div onclick="changeStringerMaterial('Schwarz')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Schwarz.jpg" alt="color-4" title="Schwarz" id="Schwarz" /></div>
-                  <p class="small-text">Schwarz</p>
-                </div>
-              </div>
-              <div onclick="changeStringerMaterial('Weiss')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Weiss.jpg" alt="color-5" title="Weiss" id="Weiss" /></div>
-                  <p class="small-text">Weiss</p>
-                </div>
-              </div>
               <div onclick="changeStringerMaterial('Beton')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Beton.jpg" alt="color-6" title="Beton" id="Beton" /></div>
-                  <p class="small-text">Beton</p>
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Beton.jpg"
+                      alt="color-1"
+                      title="Beton"
+                      id="Beton"
+                    />
+                  </div>
+                  <p class="small-text concrete">Beton</p>
                 </div>
               </div>
-              <div onclick="changeStringerMaterial('Bluesteel')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Bluesteel.jpg" alt="color-7" title="Bluesteel" id="Bluesteel" /></div>
-                  <p class="small-text">Bluesteel</p>
+              <div
+                onclick="changeStringerMaterial('Bluesteel')"
+                class="parent-con"
+              >
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Bluesteel.jpg"
+                      alt="color-2"
+                      title="Bluesteel"
+                      id="Bluesteel"
+                    />
+                  </div>
+                  <p class="small-text bluesteel">Bluesteel</p>
                 </div>
               </div>
               <div onclick="changeStringerMaterial('Buche')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Buche.jpg" alt="color-8" title="Buche" id="Buche" /></div>
-                  <p class="small-text">Buche</p>
+                <div class="con3 active">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Buche.jpg"
+                      alt="color-3"
+                      title="Buche"
+                      id="Buche"
+                    />
+                  </div>
+                  <p class="small-text beech">Buche</p>
                 </div>
               </div>
-              <div onclick="changeStringerMaterial('Canyon')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Canyon.jpg" alt="color-9" title="Canyon" id="Canyon" /></div>
-                  <p class="small-text">Canyon</p>
+              <div
+                onclick="changeStringerMaterial('Canyon')"
+                class="parent-con"
+              >
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Canyon.jpg"
+                      alt="color-4"
+                      title="Canyon"
+                      id="Canyon"
+                    />
+                  </div>
+                  <p class="small-text canyon">Canyon</p>
                 </div>
               </div>
 
-              <div onclick="changeStringerMaterial('Castle')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Castle.jpg" alt="color-10" title="Castle" id="Castle" /></div>
-                  <p class="small-text">Castle</p>
+              <div
+                onclick="changeStringerMaterial('Castle')"
+                class="parent-con"
+              >
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Castle.jpg"
+                      alt="color-5"
+                      title="Castle"
+                      id="Castle"
+                    />
+                  </div>
+                  <p class="small-text castle">Castle</p>
                 </div>
               </div>
-              <div onclick="changeStringerMaterial('Cognac')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Cognac.jpg" alt="color-11" title="Cognac" id="Cognac" /></div>
-                  <p class="small-text">Cognac</p>
+              <div
+                onclick="changeStringerMaterial('Cognac')"
+                class="parent-con"
+              >
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Cognac.jpg"
+                      alt="color-6"
+                      title="Cognac"
+                      id="Cognac"
+                    />
+                  </div>
+                  <p class="small-text cognac">Cognac</p>
                 </div>
               </div>
-              <div onclick="changeStringerMaterial('Country')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Country.jpg" alt="color-12" title="Country" id="Country" /></div>
-                  <p class="small-text">Country</p>
+              <div
+                onclick="changeStringerMaterial('Country')"
+                class="parent-con"
+              >
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Country.jpg"
+                      alt="color-7"
+                      title="Country"
+                      id="Country"
+                    />
+                  </div>
+                  <p class="small-text country">Country</p>
                 </div>
               </div>
               <div onclick="changeStringerMaterial('Eiche')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Eiche.jpg" alt="color-13" title="Eiche" id="Eiche" /></div>
-                  <p class="small-text">Eiche</p>
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Eiche.jpg"
+                      alt="color-8"
+                      title="Eiche"
+                      id="Eiche"
+                    />
+                  </div>
+                  <p class="small-text oak">Eiche</p>
                 </div>
               </div>
-              <div onclick="changeStringerMaterial('Havanna')" class="parent-con">
+              <!--<div onclick="changeStringerMaterial('E-Alu')" class="parent-con">
                 <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Havanna.jpg" alt="color-14" title="Havanna" id="Havanna" /></div>
-                  <p class="small-text">Havanna</p>
+                  <div class="con-img-div">
+                    <img class="con-img" src="images/stylepic/E-Alu.jpg" alt="color-9" title="E-Alu" id="E-Alu" />
+                  </div>
+                  <p class="small-text">E-Alu</p>
+                </div>
+              </div>-->
+              <div
+                onclick="changeStringerMaterial('Havanna')"
+                class="parent-con"
+              >
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Havanna.jpg"
+                      alt="color-9"
+                      title="Havanna"
+                      id="Havanna"
+                    />
+                  </div>
+                  <p class="small-text havanna">Havanna</p>
                 </div>
               </div>
-              <div  onclick="changeStringerMaterial('Iceberg')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Iceberg.jpg" alt="color-15" title="Iceberg" id="Iceberg" /></div>
-                  <p class="small-text">Iceberg</p>
+              <div
+                onclick="changeStringerMaterial('Iceberg')"
+                class="parent-con"
+              >
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Iceberg.jpg"
+                      alt="color-10"
+                      title="Iceberg"
+                      id="Iceberg"
+                    />
+                  </div>
+                  <p class="small-text iceberg">Iceberg</p>
                 </div>
               </div>
-              <div  onclick="changeStringerMaterial('Loft')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Loft.jpg" alt="color-16" title="Loft" id="Loft" /></div>
-                  <p class="small-text">Loft</p>
+
+              <div onclick="changeStringerMaterial('Loft')" class="parent-con">
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Loft.jpg"
+                      alt="color-11"
+                      title="Loft"
+                      id="Loft"
+                    />
+                  </div>
+                  <p class="small-text loft">Loft</p>
                 </div>
               </div>
-              <div onclick="changeStringerMaterial('Macchiato')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Macchiato.jpg" alt="color-17" title="Macchiato" id="Macchiato" /></div>
-                  <p class="small-text">Macchiato</p>
+              <div
+                onclick="changeStringerMaterial('Macchiato')"
+                class="parent-con"
+              >
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Macchiato.jpg"
+                      alt="color-12"
+                      title="Macchiato"
+                      id="Macchiato"
+                    />
+                  </div>
+                  <p class="small-text macchiato">Macchiato</p>
                 </div>
               </div>
-              <div onclick="changeStringerMaterial('Mooreiche')"  class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Mooreiche.jpg" alt="color-18" title="Mooreiche" id="Mooreiche" /></div>
-                  <p class="small-text">Mooreiche</p>
+              <div
+                onclick="changeStringerMaterial('Mooreiche')"
+                class="parent-con"
+              >
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Mooreiche.jpg"
+                      alt="color-13"
+                      title="Mooreiche"
+                      id="Mooreiche"
+                    />
+                  </div>
+                  <p class="small-text moor-oak">Mooreiche</p>
                 </div>
               </div>
-              <div onclick="changeStringerMaterial('Mustang')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Mustang.jpg" alt="color-19" title="Mustang" id="Mustang" /></div>
-                  <p class="small-text">Mustang</p>
+              <div
+                onclick="changeStringerMaterial('Mustang')"
+                class="parent-con"
+              >
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Mustang.jpg"
+                      alt="color-14"
+                      title="Mustang"
+                      id="Mustang"
+                    />
+                  </div>
+                  <p class="small-text mustang">Mustang</p>
                 </div>
               </div>
-              <div onclick="changeStringerMaterial('Nordic')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Nordic.jpg" alt="color-20" title="Nordic" id="Nordic" /></div>
-                  <p class="small-text">Nordic</p>
+              <div
+                onclick="changeStringerMaterial('Nordic')"
+                class="parent-con"
+              >
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Nordic.jpg"
+                      alt="color-15"
+                      title="Nordic"
+                      id="Nordic"
+                    />
+                  </div>
+                  <p class="small-text nordic">Nordic</p>
                 </div>
               </div>
+
               <div onclick="changeStringerMaterial('Terra')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Terra.jpg" alt="color-21" title="Terra" id="Terra" /></div>
-                  <p class="small-text">Terra</p>
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Terra.jpg"
+                      alt="color-16"
+                      title="Terra"
+                      id="Terra"
+                    />
+                  </div>
+                  <p class="small-text terra">Terra</p>
                 </div>
               </div>
-              <div onclick="changeStringerMaterial('Vermont')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Vermont.jpg" alt="color-22" title="Vermont" id="Vermont" /></div>
-                  <p class="small-text">Vermont</p>
+              <div
+                onclick="changeStringerMaterial('Toscana')"
+                class="parent-con"
+              >
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/ToscanaIcon.jpg"
+                      alt="color-17"
+                      title="ToscanaIcon"
+                      id="Toscana"
+                    />
+                  </div>
+                  <p class="small-text toscana">Toscana</p>
                 </div>
               </div>
-              <div onclick="changeStringerMaterial('Vintage')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Vintage.jpg" alt="color-23" title="Vintage" id="Vintage" /></div>
-                  <p class="small-text">Vintage</p>
+              <div
+                onclick="changeStringerMaterial('Vermont')"
+                class="parent-con"
+              >
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Vermont.jpg"
+                      alt="color-18"
+                      title="Vermont"
+                      id="Vermont"
+                    />
+                  </div>
+                  <p class="small-text vermont">Vermont</p>
+                </div>
+              </div>
+              <div
+                onclick="changeStringerMaterial('Vintage')"
+                class="parent-con"
+              >
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Vintage.jpg"
+                      alt="color-19"
+                      title="Vintage"
+                      id="Vintage"
+                    />
+                  </div>
+                  <p class="small-text vintage">Vintage</p>
                 </div>
               </div>
               <div onclick="changeStringerMaterial('Wenge')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Wenge.jpg" alt="color-24" title="Wenge" id="Wenge" /></div>
-                  <p class="small-text">Wenge</p>
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Wenge.jpg"
+                      alt="color-20"
+                      title="Wenge"
+                      id="Wenge"
+                    />
+                  </div>
+                  <p class="small-text wenge">Wenge</p>
                 </div>
               </div>
+              <div onclick="changeStringerMaterial('Weiss')" class="parent-con">
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Weiss.jpg"
+                      alt="color-21"
+                      title="Weiss"
+                      id="Weiss"
+                    />
+                  </div>
+                  <p class="small-text white">Weiss</p>
+                </div>
+              </div>
+              <div
+                onclick="changeStringerMaterial('Schwarz')"
+                class="parent-con"
+              >
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Schwarz.jpg"
+                      alt="color-22"
+                      title="Schwarz"
+                      id="Schwarz"
+                    />
+                  </div>
+                  <p class="small-text black">Schwarz</p>
+                </div>
+              </div>
+              <div
+                onclick="changeStringerMaterial('Jassmin')"
+                class="parent-con"
+              >
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Jassmin.jpg"
+                      alt="color-23"
+                      title="Jassmin"
+                      id="Jassmin"
+                    />
+                  </div>
+                  <p class="small-text jasmin">Jassmin</p>
+                </div>
+              </div>
+              <div onclick="changeStringerMaterial('Platin')"
+                class="parent-con" >
+                <div class="con3">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Platin.jpg"
+                      alt="color-24"
+                      title="Platin"
+                      id="Platin"
+                    />
+                  </div>
+                  <p class="small-text platin">Platin</p>
+                </div>
+              </div>
+			  
             </div>
           </div>
           <div class="expand-div">
-            <h2 class="text-header">FLOOR</h2>
-            <img class="expand-icon" src="images/icons8-expand-arrow-16.png" alt="icon" />
+            <h2 class="text-header floor">FLOOR</h2>
+            <img
+              class="expand-icon"
+              src="images/icons8-expand-arrow-16.png"
+              alt="icon"
+            />
           </div>
 
           <div class="dropdown config-dropdown">
             <div class="thing-grid">
               <div onclick="changeFloorMaterial('Beton')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Beton.jpg" alt="color-1" title="Beton" id="Beton" /></div>
-                  <p class="small-text">Beton</p>
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Beton.jpg"
+                      alt="color-1"
+                      title="Beton"
+                      id="Beton"
+                    />
+                  </div>
+                  <p class="small-text concrete">Beton</p>
                 </div>
               </div>
-              <div  onclick="changeFloorMaterial('Bluesteel')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Bluesteel.jpg" alt="color-2" title="Bluesteel" id="Bluesteel" /></div>
-                  <p class="small-text">Bluesteel</p>
+              <div
+                onclick="changeFloorMaterial('Bluesteel')"
+                class="parent-con"
+              >
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Bluesteel.jpg"
+                      alt="color-2"
+                      title="Bluesteel"
+                      id="Bluesteel"
+                    />
+                  </div>
+                  <p class="small-text bluesteel">Bluesteel</p>
                 </div>
               </div>
-              <div  onclick="changeFloorMaterial('Buche')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Buche.jpg" alt="color-3" title="Buche" id="Buche" /></div>
-                  <p class="small-text">Buche</p>
+              <div onclick="changeFloorMaterial('Buche')" class="parent-con">
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Buche.jpg"
+                      alt="color-3"
+                      title="Buche"
+                      id="Buche"
+                    />
+                  </div>
+                  <p class="small-text beech">Buche</p>
                 </div>
               </div>
-              <div  onclick="changeFloorMaterial('Canyon')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Canyon.jpg" alt="color-4" title="Canyon" id="Canyon" /></div>
-                  <p class="small-text">Canyon</p>
+              <div onclick="changeFloorMaterial('Canyon')" class="parent-con">
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Canyon.jpg"
+                      alt="color-4"
+                      title="Canyon"
+                      id="Canyon"
+                    />
+                  </div>
+                  <p class="small-text canyon">Canyon</p>
                 </div>
               </div>
 
-              <div  onclick="changeFloorMaterial('Castle')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Castle.jpg" alt="color-5" title="Castle" id="Castle" /></div>
-                  <p class="small-text">Castle</p>
+              <div onclick="changeFloorMaterial('Castle')" class="parent-con">
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Castle.jpg"
+                      alt="color-5"
+                      title="Castle"
+                      id="Castle"
+                    />
+                  </div>
+                  <p class="small-text castle">Castle</p>
                 </div>
               </div>
-              <div  onclick="changeFloorMaterial('Cognac')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Cognac.jpg" alt="color-6" title="Cognac" id="Cognac" /></div>
-                  <p class="small-text">Cognac</p>
+              <div onclick="changeFloorMaterial('Cognac')" class="parent-con">
+                <div class="con4 active">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Cognac.jpg"
+                      alt="color-6"
+                      title="Cognac"
+                      id="Cognac"
+                    />
+                  </div>
+                  <p class="small-text congnac">Cognac</p>
                 </div>
               </div>
-              <div  onclick="changeFloorMaterial('Country')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Country.jpg" alt="color-7" title="Country" id="Country" /></div>
-                  <p class="small-text">Country</p>
+              <div onclick="changeFloorMaterial('Country')" class="parent-con">
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Country.jpg"
+                      alt="color-7"
+                      title="Country"
+                      id="Country"
+                    />
+                  </div>
+                  <p class="small-text country">Country</p>
                 </div>
               </div>
-              <div  onclick="changeFloorMaterial('Eiche')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Eiche.jpg" alt="color-8" title="Eiche" id="Eiche" /></div>
-                  <p class="small-text">Eiche</p>
+              <div onclick="changeFloorMaterial('Eiche')" class="parent-con">
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Eiche.jpg"
+                      alt="color-8"
+                      title="Eiche"
+                      id="Eiche"
+                    />
+                  </div>
+                  <p class="small-text oak">Eiche</p>
                 </div>
               </div>
-              <div  onclick="changeFloorMaterial('Havanna')"  class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Havanna.jpg" alt="color-9" title="Havanna" id="Havanna" /></div>
-                  <p class="small-text">Havanna</p>
+              <div onclick="changeFloorMaterial('Havanna')" class="parent-con">
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Havanna.jpg"
+                      alt="color-9"
+                      title="Havanna"
+                      id="Havanna"
+                    />
+                  </div>
+                  <p class="small-text havanna">Havanna</p>
                 </div>
               </div>
-              <div  onclick="changeFloorMaterial('Iceberg')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Iceberg.jpg" alt="color-10" title="Iceberg" id="Iceberg" /></div>
-                  <p class="small-text">Iceberg</p>
+              <div onclick="changeFloorMaterial('Iceberg')" class="parent-con">
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Iceberg.jpg"
+                      alt="color-10"
+                      title="Iceberg"
+                      id="Iceberg"
+                    />
+                  </div>
+                  <p class="small-text iceberg">Iceberg</p>
                 </div>
               </div>
-              <div  onclick="changeFloorMaterial('Loft')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Loft.jpg" alt="color-11" title="Loft" id="Loft" /></div>
-                  <p class="small-text">Loft</p>
+              <div onclick="changeFloorMaterial('Loft')" class="parent-con">
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Loft.jpg"
+                      alt="color-11"
+                      title="Loft"
+                      id="Loft"
+                    />
+                  </div>
+                  <p class="small-text loft">Loft</p>
                 </div>
               </div>
-              <div  onclick="changeFloorMaterial('Macchiato')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Macchiato.jpg" alt="color-12" title="Macchiato" id="Macchiato" /></div>
-                  <p class="small-text">Macchiato</p>
+              <div
+                onclick="changeFloorMaterial('Macchiato')"
+                class="parent-con"
+              >
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Macchiato.jpg"
+                      alt="color-12"
+                      title="Macchiato"
+                      id="Macchiato"
+                    />
+                  </div>
+                  <p class="small-text macchiato">Macchiato</p>
                 </div>
               </div>
-              <div  onclick="changeFloorMaterial('Mooreiche')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Mooreiche.jpg" alt="color-13" title="Mooreiche" id="Mooreiche" /></div>
-                  <p class="small-text">Mooreiche</p>
+              <div
+                onclick="changeFloorMaterial('Mooreiche')"
+                class="parent-con"
+              >
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Mooreiche.jpg"
+                      alt="color-13"
+                      title="Mooreiche"
+                      id="Mooreiche"
+                    />
+                  </div>
+                  <p class="small-text moor-oak">Mooreiche</p>
                 </div>
               </div>
-              <div  onclick="changeFloorMaterial('Mustang')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Mustang.jpg" alt="color-14" title="Mustang" id="Mustang" /></div>
-                  <p class="small-text">Mustang</p>
+              <div onclick="changeFloorMaterial('Mustang')" class="parent-con">
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Mustang.jpg"
+                      alt="color-14"
+                      title="Mustang"
+                      id="Mustang"
+                    />
+                  </div>
+                  <p class="small-text mustang">Mustang</p>
                 </div>
               </div>
-              <div  onclick="changeFloorMaterial('Nordic')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Nordic.jpg" alt="color-15" title="Nordic" id="Nordic" /></div>
-                  <p class="small-text">Nordic</p>
+              <div onclick="changeFloorMaterial('Nordic')" class="parent-con">
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Nordic.jpg"
+                      alt="color-15"
+                      title="Nordic"
+                      id="Nordic"
+                    />
+                  </div>
+                  <p class="small-text nordic">Nordic</p>
                 </div>
               </div>
-              <div  onclick="changeFloorMaterial('Terra')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Terra.jpg" alt="color-16" title="Terra" id="Terra" /></div>
-                  <p class="small-text">Terra</p>
+              <div onclick="changeFloorMaterial('Terra')" class="parent-con">
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Terra.jpg"
+                      alt="color-16"
+                      title="Terra"
+                      id="Terra"
+                    />
+                  </div>
+                  <p class="small-text terra">Terra</p>
                 </div>
               </div>
-              <div  onclick="changeFloorMaterial('Vermont')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Vermont.jpg" alt="color-17" title="Vermont" id="Vermont" /></div>
-                  <p class="small-text">Vermont</p>
+              <div onclick="changeFloorMaterial('Toscana')" class="parent-con">
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/ToscanaIcon.jpg"
+                      alt="color-17"
+                      title="Toscana"
+                      id="Toscana"
+                    />
+                  </div>
+                  <p class="small-text toscana">Toscana</p>
                 </div>
               </div>
-              <div  onclick="changeFloorMaterial('Vintage')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Vintage.jpg" alt="color-18" title="Vintage" id="Vintage" /></div>
-                  <p class="small-text">Vintage</p>
+              <div onclick="changeFloorMaterial('Vermont')" class="parent-con">
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Vermont.jpg"
+                      alt="color-18"
+                      title="Vermont"
+                      id="Vermont"
+                    />
+                  </div>
+                  <p class="small-text vermont">Vermont</p>
                 </div>
               </div>
-              <div  onclick="changeFloorMaterial('Wenge')" class="parent-con">
-                <div class="con">
-                  <div class="con-img-div"><img class="con-img" src="images/stylepic/Wenge.jpg" alt="color-19" title="Wenge" id="Wenge" /></div>
-                  <p class="small-text">Wenge</p>
+              <div onclick="changeFloorMaterial('Vintage')" class="parent-con">
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Vintage.jpg"
+                      alt="color-19"
+                      title="Vintage"
+                      id="Vintage"
+                    />
+                  </div>
+                  <p class="small-text vintage">Vintage</p>
+                </div>
+              </div>
+              <div onclick="changeFloorMaterial('Wenge')" class="parent-con">
+                <div class="con4">
+                  <div class="con-img-div">
+                    <img
+                      class="con-img"
+                      src="images/stylepic/Wenge.jpg"
+                      alt="color-20"
+                      title="Wenge"
+                      id="Wenge"
+                    />
+                  </div>
+                  <p class="small-text wenge">Wenge</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="expand-div">
-            <h2 class="text-header">ENQUIRY</h2>
-            <img class="expand-icon" src="images/icons8-expand-arrow-16.png" alt="icon" />
+            <h2 class="text-header enquiry">ENQUIRY</h2>
+            <img
+              class="expand-icon"
+              src="images/icons8-expand-arrow-16.png"
+              alt="icon"
+            />
           </div>
-          <div class="dropdown config-dropdown" style="background: rgb(224, 224, 224)">
+          <div
+            class="dropdown config-dropdown enguiry-dropdown"
+            style="background: rgb(224, 224, 224)"
+          >
             <div class="enquiry-form-nav">
-              <p class="enquiry-nav enquiry-form-nav-active">Enquiry Now</p>
-              <p class="enquiry-nav">Order Samples</p>
+              <p class="enquiry-nav enquiry-form-nav-active enqiury-now">
+                Enquiry Now
+              </p>
+              <p class="enquiry-nav order-samp">Order Samples</p>
             </div>
             <div class="enquiry-form-div backdrop_dropdown-open">
-              <p style="margin: 2rem auto; width: 80%; text-align: center">ADD Detail here</p>
-              <!-- <form action="">
-                <label for="">Condition of your steps?</label>
-                <select placeholder="bgsc">
-                  <option value="" disabled selected hidden>Choose an answer</option>
-                  <option value="Very Good">Very Good</option>
-                  <option value="Ok">Ok</option>
-                  <option value="Not So Good">Not So Good</option>
-                </select>
-                <label for="">Do You Have Stairs Deeper Than 31 cm?</label>
-                <select>
-                  <option value="Yes">Yes</option>
-                  <option value="No">No</option>
-                </select>
-                <label for="">Is your staircase open on one side?</label>
-                <select>
-                  <option value="Yes">Yes</option>
-                  <option value="No">No</option>
-                </select>
-                <label for="">Does your stair have a landing?</label>
-                <select>
-                  <option value="Yes">Yes</option>
-                  <option value="No">No</option>
-                </select>
-                <label for="">Step Quantity</label>
-                <input type="number" id="" min="8" max="22" />
-                <label for="">First Name</label>
-                <input type="text" />
-                <label for="">Last Name</label>
-                <input type="text" />
-                <label for="">Company Name</label>
-                <input type="text" />
-                <label for="">Phone</label>
-                <input type="text" />
-                <label for="">Email</label>
-                <input type="text" />
-                <label for="">Message</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <button>Enquiry</button>
-              </form> -->
+              <p class="enquiry-details">ADD Detail here</p>
             </div>
             <div class="order-sample">
-              <p class="order-sample-text">You can order step and step samples from us in the online shop. Just click the button below. You will then be forwarded directly to our online shop.</p>
-              <button>ORDER A SAMPLE</button>
+              <p class="order-sample-text">
+                You can order step and step samples from us in the online shop.
+                Just click the button below. You will then be forwarded directly
+                to our online shop.
+              </p>
+              <a
+                class="order-samples"
+                href="
+              https://www.stiege.com/de/shop-laminatstufen/muster/"
+                target="_blank"
+                >ORDER A SAMPLE</a
+              >
             </div>
           </div>
 
           <div class="social-media">
-            <img src="images/icons8-facebook-25.png" alt="facebook" />
-            <img src="images/icons8-twitter-25.png" alt="twitter" />
-            <img src="images/icons8-pinterest-25.png" alt="pinterest" />
+            <a target="_blank" href=" https://www.facebook.com/RenoProfil"
+              ><img src="images/icons8-facebook-25.png" alt="facebook"
+            /></a>
+            <a
+              target="_blank"
+              href="https://www.youtube.com/channel/UCfqiMJ0Bvy26hV5iB4c7tNg"
+              ><img src="images/youTube.png" alt="youTube"
+            /></a>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/renoprofil.treppenrenovierung/"
+              ><img src="images/instagram.png" alt="instagram"
+            /></a>
+            <a target="_blank" href="https://www.pinterest.at/renoprofil/"
+              ><img src="images/icons8-pinterest-25.png" alt="pinterest"
+            /></a>
           </div>
         </div>
       </div>

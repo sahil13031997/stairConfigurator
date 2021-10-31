@@ -19,28 +19,40 @@ function onCancelClicked() {
 }
 
 function callOnStart() {
-  gameInstance.SendMessage('GameObject', 'callingStepMaterial', 'Bluesteel.jpg');
-  gameInstance.SendMessage('GameObject', 'callingCheekMaterial', 'Bluesteel.jpg');
-  gameInstance.SendMessage('GameObject', 'callingFloorMaterial', 'Iceberg.jpg');
-  gameInstance.SendMessage('GameObject', 'callingsettingStageMaterial', 'Bluesteel.jpg');
+  gameInstance.SendMessage('TextureLoader', 'callingStepMaterial', 'Cognac');
+  gameInstance.SendMessage('TextureLoader', 'callingCheekMaterial', 'Buche');
+  gameInstance.SendMessage('TextureLoader', 'callingFloorMaterial', 'Cognac');
+  gameInstance.SendMessage('TextureLoader', 'callingsettingStageMaterial', 'Weiss');
 }
 
 function changeStepMaterial(str) {
 		
-  document.getElementById('staircase-model').contentWindow.gameInstance.SendMessage('GameObject', 'callingStepMaterial', `${str}.jpg`);
+  document.getElementById('staircase-model').contentWindow.gameInstance.SendMessage('TextureLoader', 'callingStepMaterial', str);
 }
 
 function changeRiserMaterial(str) {
 	
-  document.getElementById('staircase-model').contentWindow.gameInstance.SendMessage('GameObject', 'callingsettingStageMaterial', `${str}.jpg`);
+  document.getElementById('staircase-model').contentWindow.gameInstance.SendMessage('TextureLoader', 'callingsettingStageMaterial', str);
 }
 
 function changeStringerMaterial(str) {
 	
-  document.getElementById('staircase-model').contentWindow.gameInstance.SendMessage('GameObject', 'callingCheekMaterial', `${str}.jpg`);
+  document.getElementById('staircase-model').contentWindow.gameInstance.SendMessage('TextureLoader', 'callingCheekMaterial', str);
 }
 
 function changeFloorMaterial(str) {
 	
-  document.getElementById('staircase-model').contentWindow.gameInstance.SendMessage('GameObject', 'callingFloorMaterial', `${str}.jpg`);
+  document.getElementById('staircase-model').contentWindow.gameInstance.SendMessage('TextureLoader', 'callingFloorMaterial', str);
 }
+
+function RemoveRiserMaterial() {
+	
+  document.getElementById('staircase-model').contentWindow.gameInstance.SendMessage('TextureLoader', 'selectingStageMatNone' );
+}
+
+window.onload = (event) => {
+
+		
+
+};
+

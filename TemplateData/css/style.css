@@ -1,125 +1,134 @@
-body{
-	margin:0px;
-	padding:0px;
-	position: absolute; 
-	height:100%;
-	width:100%;
-	background-size:cover;
-	font-style: regular;
-	font-family:"Myriad Pro", Myriad,"Helvetica Neue", Helvetica, Arial, sans-serif;
-	background-color:#f0f0f1;
+body {
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  font-style: regular;
+  font-family: "Myriad Pro", Myriad, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  background-color: #f0f0f1;
 }
 
-.webgl-content,#loadingBlock,#errorBrowserBlock{
-	padding:0px;
-	position:absolute;
-	height:100%;
-	width:100%;
-	background-color:#f0f0f1;
+.webgl-content,
+#loadingBlock,
+#errorBrowserBlock {
+  padding: 0px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #f0f0f1;
 }
 
-#gameContainer,canvas{
-	position:absolute;
-	height:100%;
-	width:100%;
-	background-color:#f0f0f1;
+#gameContainer,
+canvas {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #f0f0f1;
 }
 
-#fullScreenButton{
-	height:30px;
-	width:30px;
-	position:absolute;
-	z-index:1;
-	bottom:5px;
-	right:5px;
-	background-color:transparent;
-	background-image:url("../img/fullScreen_on.png");
-	background-size:30px 30px;
-	border:none;
-	cursor: pointer;
+#fullScreenButton {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  z-index: 1;
+  bottom: 5px;
+  right: 5px;
+  background-color: transparent;
+  background-image: url("../img/fullScreen_on.png");
+  background-size: 30px 30px;
+  border: none;
+  cursor: pointer;
 }
 
-.subtitle{
-	color:#1896a7;
-	font-size:2.5vh;
-	padding-bottom:3vh;
-	padding-top: 3vh;
-	display: block;
-	height:15vh;
-	width:40vw;
-	margin:auto;
-	text-align: center;
+.subtitle {
+  color: #1896a7;
+  font-size: 2.5vh;
+  padding-bottom: 3vh;
+  padding-top: 3vh;
+  display: block;
+  height: 15vh;
+  width: 40vw;
+  margin: auto;
+  text-align: center;
 }
 
-.logo{
-	height:25vh;
-	width:auto;
-	display: block;
-	margin:auto;
-	margin-top:2vh;
+.logo {
+  height: 25vh;
+  width: auto;
+  display: block;
+  margin: auto;
+  margin-top: 2vh;
 }
 
-#loadingBlock,#errorBrowserBlock{
-	background-image:url("../img/background.png");
-	background-size:cover;
+#loadingBlock,
+#errorBrowserBlock {
+  background-image: url("../img/background.png");
+  background-size: cover;
 }
 
-#emptyBar{
-	background: url("../img/progressEmpty.png") no-repeat right;
-	float: right; 
-	width: 60%; 
-	height: 100%; 
-	display: inline-block;
+#emptyBar {
+  background: url("../img/progressEmpty.png") no-repeat right;
+  float: right;
+  width: 60%;
+  height: 100%;
+  display: inline-block;
 }
 
-#fullBar{
-	background: url("../img/progressFull.png") no-repeat right;
-	float: left; 
-	width: 40%; 
-	height: 100%; 
-	display: inline-block;
+#fullBar {
+  background: url("../img/progressFull.png") no-repeat right;
+  float: left;
+  width: 40%;
+  height: 100%;
+  display: inline-block;
 }
 
-#progressBar,#warningBrowserBlock,#warningMobileBlock,#errorContent{
-	height:25vh;
-	width:40vw;
-	margin:auto;
-	text-align: center;
+#progressBar,
+#warningBrowserBlock,
+#warningMobileBlock,
+#errorContent {
+  height: 25vh;
+  width: 40vw;
+  margin: auto;
+  text-align: center;
 }
 
-#progressBar{
-	height:8vh;
-	color:#666666;
-	font-size:4vh;
+#progressBar {
+  height: 8vh;
+  color: #666666;
+  font-size: 4vh;
 }
 
-#warningBrowserBlock,#warningMobileBlock,#errorContent{
-	margin-top:15vh;
-	color:#666666;
-	font-size:2.3vh;
+#warningBrowserBlock,
+#warningMobileBlock,
+#errorContent {
+  margin-top: 15vh;
+  color: #666666;
+  font-size: 2.3vh;
 }
 
-.browserIcons{
-	display: inline-flex;
-	margin-top:2vh;
+.browserIcons {
+  display: inline-flex;
+  margin-top: 2vh;
 }
 
-.browserIcons a{
-	width:150px;
+.browserIcons a {
+  width: 150px;
 }
 
-#errorContent{
-	font-size:3vh;
-	margin-top:5vh;
+#errorContent {
+  font-size: 3vh;
+  margin-top: 5vh;
 }
 
-.centered{
-	height: 100%;
-	max-width:770px;
-	margin-left:auto;
-	margin-right:auto;
+.centered {
+  height: 100%;
+  max-width: 770px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 
 /* When aspect-ratio is smaller than 4/3*/
 
@@ -199,7 +208,6 @@ body{
 	}
 }*/
 
-
 /* When aspect-ratio is bigger than 16/9*/
 
 /*@media (min-aspect-ratio: 16/9){
@@ -234,7 +242,6 @@ body{
 		height:calc(100% - 2px);
 	}
 }*/
-
 
 /* inas-code */
 #instruction {
@@ -296,7 +303,7 @@ body{
 
 .btn-text {
   color: #ffffff;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
 
   position: absolute;
@@ -304,6 +311,27 @@ body{
   right: 50%;
 
   transform: translate(50%);
-  font-size:21px;
+  font-size: 21px;
+}
+
+.img-logo-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.para-div {
+  width: 60%;
+  margin: 0 auto;
+  font-weight: 700;
+}
+
+.mid-logo {
+  width: 25rem;
+}
+.comp-logo {
+  width: 9.375rem;
+  margin: 1.5rem;
 }
 /* inas-code-end */

@@ -20,16 +20,27 @@ function onCancelClicked() {
 
 function callOnStart() {
   gameInstance.SendMessage('TextureLoader', 'callingStepMaterial', 'Cognac');
-  gameInstance.SendMessage('TextureLoader', 'callingCheekMaterial', 'Buche');
+  gameInstance.SendMessage('TextureLoader', 'callingCheekMaterial', 'Cognac');
   gameInstance.SendMessage('TextureLoader', 'callingFloorMaterial', 'Cognac');
   gameInstance.SendMessage('TextureLoader', 'callingsettingStageMaterial', 'Weiss');
   
-  var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-if (isIOS) {
-   gameInstance.SendMessage('masterCamera', 'activateMoibileControls');
-} else {
-  console.log('This is Not a IOS device');
-}
+
+
+	var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+
+    if (/windows phone/i.test(userAgent)) {
+        gameInstance.SendMessage('masterCamera', 'activateMoibileControls');
+    }
+
+    if (/android/i.test(userAgent)) {
+        gameInstance.SendMessage('masterCamera', 'activateMoibileControls');
+    }
+
+  
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        gameInstance.SendMessage('masterCamera', 'activateMoibileControls');
+    }
 }
 
 function changeStepMaterial(str) {

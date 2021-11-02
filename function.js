@@ -23,6 +23,13 @@ function callOnStart() {
   gameInstance.SendMessage('TextureLoader', 'callingCheekMaterial', 'Buche');
   gameInstance.SendMessage('TextureLoader', 'callingFloorMaterial', 'Cognac');
   gameInstance.SendMessage('TextureLoader', 'callingsettingStageMaterial', 'Weiss');
+  
+  var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+if (isIOS) {
+   gameInstance.SendMessage('masterCamera', 'activateMoibileControls');
+} else {
+  console.log('This is Not a IOS device');
+}
 }
 
 function changeStepMaterial(str) {
